@@ -1,0 +1,27 @@
+
+= Apt-Fu
+
+Package a rails project to a debian .deb file for easy deployment!
+
+This simple rails plugin adds 3 rake tasks to your project:
+
+  rake deb:create                           # Create a deb file from the rails package
+  rake deb:deploy                           # Deploy
+  rake deb:vdeploy                          # Deploy to vserver
+
+I find it convenient to sometimes not allow access to the version control server for a production server. This plugin packages a rails project into a .deb file without any dependencies on debian tools. Yes, it runs on OS X!
+
+== Future work:
+
+ * Add a preinst script that empties the code diretories in the app before moving in the new stuff. Now only new stuff is added.
+
+ * Specify debian dependencies
+
+ * Configuration in yaml
+
+== Credits
+
+Greatly inspired by:
+
+http://synthesize.us/HOWTO_make_a_deb_archive_without_dpkg
+
